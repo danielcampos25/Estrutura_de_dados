@@ -26,3 +26,5 @@ def quick_sort(alist):
     return quick_sort(items_lower)+ [pivot] + quick_sort(items_greater)
 
 
+#Obs: pior dos casos O(n^2)
+#O(n*log(n)) melhor e caso medio
