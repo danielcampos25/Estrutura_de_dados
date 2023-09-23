@@ -1,9 +1,3 @@
-'''
-
-'''
-
-
-
 class Node:
     def __init__(self,dataInit):
         self.data = dataInit
@@ -64,7 +58,9 @@ class linkedList:
             else:
                 pointer = pointer.next
                 i+=1
-            raise ValueError(f"{elem} is not in the list")
+        raise ValueError(f"{elem} is not in the list")
+
+    
 
 
         
