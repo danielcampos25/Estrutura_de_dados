@@ -3,11 +3,11 @@ pop() - remove e retorna o ultimo item da lista
 pop(pos) - remove e retorna o itme selecionado
 '''
 #Implementando listas ligadas:
-class Node:
-    def __init__(self,initData):
+class Node:    #Nós são componentes de listas que se encadeiam entre si, são compostos pelo dado e pelo seu "indicador de próximo"
+    def __init__(self,initData): #função construtora do nó
         self.data = initData    
         self.next = None
-    
+    #relações
     def getData(self):
         return self.data
     
