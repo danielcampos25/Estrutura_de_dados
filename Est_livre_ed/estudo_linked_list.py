@@ -60,6 +60,25 @@ class linkedList:
                 i+=1
         raise ValueError(f"{elem} is not in the list")
 
+    def insert(self, index, elem): # inserir um elemento em uma posição especifica da lista 
+        #dois casos: inserir no head ou não
+        if index ==0:
+            node = Node(elem)
+            node.next = self.head
+            self.head = node
+        pointer = self._getnode(index-1)
+        node = Node(elem)
+        pointer.next = 
+        
+
+    def _getnode(self,index):
+        pointer = self.head
+        for _ in range(index-1):
+            if pointer:
+                pointer = pointer.next
+            raise IndexError("Index out of range")
+        return pointer
+
     
 
 
