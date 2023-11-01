@@ -24,7 +24,48 @@ class BinaryTree:
                 self.tree.insert(2,[elem,[],subtree])
             else:
                 self.tree.insert(2,[elem,[],[]])
+    '''Função inorder:
+    1) Nó esquerda
+    2)Nó raíz
+    3)Nó direita
 
-    def _inorder(self,subtree):
+
+    '''
+    def read_inorder(self):
+        self._read_inorder(self.tree)
+
+    def _read_inorder(self, subtree):
         if subtree:
-            return (self._inorder)
+            left, root, right = subtree
+            self._read_inorder(left)
+            print(root, end=' ')  # Imprime o elemento do nó raiz
+            self._read_inorder(right)
+    ''' Leitura pós ordem:
+    1)Nó esquerda
+    2)Nó direita
+    3) Nó raiz
+    '''
+    def postorder(self):
+        return self._postorder(self.tree)
+
+    def _postorder(self, subtree):
+        if subtree:
+            left, root, right = subtree
+            return self._postorder(left) + self._postorder(right) + [root]
+        return []
+
+    ''' Leitura pré ordem:
+    1) Nó raíz
+    2) Nó esquerda
+    3) Nó direita
+    '''
+    def preorder(self):
+        return self._preorder(self.tree)
+
+    def _preorder(self, subtree):
+        if subtree:
+            left, root, right = subtree
+            return [root] + self._preorder(left) + self._preorder(right)
+        return []
+
+
