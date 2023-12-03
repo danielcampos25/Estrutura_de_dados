@@ -35,6 +35,7 @@ class BinaryTree:
             self.postoder_traversal(node.left)
         if node.right:
             self.postoder_traversal(node.right)
+    
 
         print(node)
 

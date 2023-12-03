@@ -5,7 +5,7 @@ class BinaryTree:
         if root is None:
             root = []
         else:
-            self.tree = [root, [],[]]
+            self.tree = [[], root,[]]
 
     def insert_left(self,elem):
         if len(self.tree)>1:
@@ -40,6 +40,16 @@ class BinaryTree:
             self._read_inorder(left)
             print(root, end=' ')  # Imprime o elemento do nó raiz
             self._read_inorder(right)
+
+    def inorder(self):
+        return  self._inorder(self.tree)
+
+    def _inorder(self,subtree):
+        if subtree:
+            left,root,right = subtree
+            return self._inorder(left) + [root] + self._inorder(right)
+        else:
+            return []
     ''' Leitura pós ordem:
     1)Nó esquerda
     2)Nó direita
