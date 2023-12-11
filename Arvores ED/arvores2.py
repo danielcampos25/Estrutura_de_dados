@@ -67,14 +67,15 @@ class BST(BT):
 #criando funçoes que recebem arvores como parametros            
 
 def inverteAB(raiz):
-    raiz = i(raiz)
-
     def i(node):
         if node is not None:
             node.left,node.right = node.right,node.left
             i(node.left)
             i(node.right)
         return node
+    raiz = i(raiz)
+
+    
 
 
 def verifica_simetriaAB(raiz):
